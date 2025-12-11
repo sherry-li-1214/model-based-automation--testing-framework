@@ -29,7 +29,7 @@ const (CCC)_CLIENT_SECRET = __ENV.client_secret;
 export function setup() {
   // Get the forge token to access the API
   
- const ocv_id="1000552160";
+ const ocv_id="";
  let accessTokenResp=getFakeTokenstaffJWTFromForge(ocv_id);
  console.log('accessTokenResp:',accessTokenResp)
   return accessTokenResp;
