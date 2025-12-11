@@ -1,4 +1,11 @@
 {
-  
- }
+  "domain-no-mTLS":"https://dev.int.com",
+  "domain-with-mTLS": "https://dev2.int.com",
 
+  "client_secret_in_GCP": "",
+  "ext-domain-with-mTLS":"",
+  "ext-domain-no-mTLS": "https://dev2.ext.int.com",
+
+  "client_id_in_GCP":"",
+  "AZURE_TOKEN_URL" :"https://login.microsoftonline.com/**/oauth2/v2.0/token"
+}
