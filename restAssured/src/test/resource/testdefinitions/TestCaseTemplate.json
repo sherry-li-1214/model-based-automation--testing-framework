@@ -1,0 +1,146 @@
+ [
+  {
+    "testName": "PT_Test_Endpoint_Response_200",
+    "enabled": true,
+    "baseUri": "/catalog/v2",
+    "path": "/products",
+    "method": "GET",
+    "statusCode": "200",
+    "inputFormat": "application/json",
+    "queryParameters":
+    {
+      "include": "multiUseProducts",
+      "bb": "dd"
+    },
+    "pathParameters":
+    {
+
+    },
+    "headerParameters":
+    {
+      "header1": "aa",
+      "header2": "bb"
+    },
+    "authParameters":
+    {
+      "type": "staffToken",
+      "ocvId": ""
+    },
+
+    "bodyParameters":
+   {
+     "body1": "str1",
+     "body2": "str2"
+   },
+    "formParameters": {
+
+    },
+
+    "responseCheck":
+    {
+      "statusCode": "200",
+      "responseTime":"3000",
+      "body.dataType":"DetailsResult",
+      "body.dataCount": 1
+    },
+    "schemaCheckEnabled": false,
+
+    "responseSchemaValidate": "openAPI/api.yml",
+    "responseSchemaFormatWhitelist": [
+      {
+        "type": "integer",
+        "format": "int32"
+      }
+    ]
+  },
+  {
+    "testName": "NG_Test_Endpoint_Response_200",
+    "enabled": true,
+    "baseUri": "/catalog/v2",
+    "path": "/products",
+    "method": "POST",
+    "statusCode": "400",
+    "inputFormat": "application/json",
+    "queryParameters":
+    {
+      "include": "multiUseProducts",
+      "bb": "dd"
+    },
+    "pathParameters":
+    {
+
+    },
+    "bodyParameters":
+    {
+      "body1": "str1",
+      "body2": "str2"
+    },
+    "formParameters": {
+
+    },
+    "headerParameters":
+    {
+      "header1": "aa",
+      "header2": "bb"
+    },
+    "authParameters":
+    {
+      "type": "userJWT",
+      "ocvId": ""
+
+    },
+    "responseCheck":
+    {
+      "statusCode": "200",
+      "responseTime":"3000",
+      "body.dataType":"ProductDetailsResult",
+      "body.dataCount": 1
+    },
+    "schemaCheckEnabled": false,
+    "apiSchemaPath": "openAPI/api.yml"
+
+  }
+,
+   {
+     "testName": "NG_Test_Endpoint_Response_400",
+     "enabled": true,
+     "baseUri": "/catalog/v2",
+     "path": "/products",
+     "method": "POST",
+     "statusCode": "400",
+     "inputFormat": "application/json",
+     "outputFormat": "application/json",
+     "queryParameters":
+     {
+       "include": "multiUseProducts",
+       "bb": "dd"
+     },
+     "pathParameters":
+     {
+
+     },
+     "bodyParameters":
+     {
+       "body1": "str1",
+       "body2": "str2"
+     },
+     "formParameters": {
+
+     },
+     "headerParameters":
+     {
+       "header1": "aa",
+       "header2": "bb"
+     },
+     "authParameters":
+     {
+       "type": "systemToken",
+       "forgeClientId": ""
+     },
+     "responseCheck":
+     {
+     },
+     "schemaCheckEnabled": false,
+     "apiSchemaPath": "src/test/resources/openAPI/api.yml"
+    }
+ ]

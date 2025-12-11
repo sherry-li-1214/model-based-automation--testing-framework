@@ -1,0 +1,33 @@
+{
+ "cts": "OAUTH2_STATELESS_GRANT",
+ "auditTrackingId": "",
+ "subname": "cing",
+ "iss": "",
+ "tokenName": "access_token",
+ "token_type": "Bearer",
+ "aud": "",
+ "grant_type": "client_credentials",
+ "realm": "/system",
+ "jti": "",
+ "role": "",
+ "rqf": {
+  "sub": "",
+  "persona": {
+   "_id": "",
+   "type": "retail"
+  },
+  "ocvid": ""
+ },
+ "acr": "",
+ "act": {
+  "sub": "<forgeClientId>"
+ },
+ "amr": [
+  "pwd"
+ ],
+ "token_type": "",
+ "scope": [
+
+ ],
+ "expires_in": 31536000
+}

@@ -1,0 +1,28 @@
+{
+ "sub": "",
+ "persona": {
+  "_id": "",
+  "type": "retail"
+ },
+ "amr": [
+  "otp",
+  "pin"
+ ],
+ "tokenName": "access_token",
+ "active": true,
+ "token_type": "Bearer",
+ "client_id": "am-internal",
+ "aud": "",
+ "acr": "IAL4.AAL3.FAL1",
+ "grant_type": "",
+ "scope": [
+  
+ ],
+ "ocvid": "<ocvID>",
+ "token_type": "customer",
+ "realm": "/customer",
+ "scopes": [
+  
+ ],
+ "expires_in": 31536000
+}

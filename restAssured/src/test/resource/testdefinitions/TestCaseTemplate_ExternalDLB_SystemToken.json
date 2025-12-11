@@ -1,0 +1,51 @@
+ [
+   {
+     "testName": "NG_Test_Response_500",
+     "enabled": true,
+     "baseUri": "",
+     "path": "/notifications",
+     "method": "POST",
+     "statusCode": "400",
+     "inputFormat": "application/json",
+     "queryParameters":
+     {
+       "param1": "aa",
+       "param2": "dd"
+     },
+     "pathParameters":
+     {
+
+     },
+     "bodyParameters":
+     {
+       "body1": "str1",
+       "body2": "str2"
+     },
+     "formParameters": {
+
+     },
+     "headerParameters":
+     {
+       "header1": "aa",
+       "header2": "bb"
+     },
+     "authParameters":
+     {
+       "type": "systemToken",
+       "forgeClientId": ""
+     },
+     "responseCheck":
+     {
+       "statusCode": "200",
+       "responseTime":"3000",
+       "body.dataType":"DetailsResult",
+       "body.dataCount": "1"
+     },
+     "schemaCheckEnabled": false,
+     "apiSchemaPath": "openAPI/api3.json"
+    }
+
+ ]
+
+
+

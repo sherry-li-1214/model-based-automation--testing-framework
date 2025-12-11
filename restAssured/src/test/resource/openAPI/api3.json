@@ -1,0 +1,165 @@
+
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Catalog API",
+    "version": "v2",
+    "description": ""
+  },
+  "servers": [
+    {
+      "url": "https://<lb>/aaa/{version}/"
+    }
+  ],
+  "paths": {
+    "/test": {
+      "get": {
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/type_12"
+                }
+              }
+            },
+            "x-annotation-amf-mediaType": "application/json"
+          },
+          "400": {
+            "description": "The request cannot be performed due to a malformed request syntax, and invalid request message, or an invalid request header\n",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/type_1"
+                }
+              }
+            },
+            "x-annotation-amf-mediaType": "application/json"
+          },
+          "401": {
+            "description": "Unauthorized or invalid client application credentials"
+          },
+          "404": {
+            "description": "No resource exists for the requested URI.\n",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/type_1"
+                }
+              }
+            },
+            "x-annotation-amf-mediaType": "application/json"
+          },
+          "405": {
+            "description": "The specified method against the resource is invalid\n",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/type_1"
+                }
+              }
+            },
+            "x-annotation-amf-mediaType": "application/json"
+          },
+          "406": {
+            "description": "Not Acceptable\n",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/type_1"
+                }
+              }
+            },
+            "x-annotation-amf-mediaType": "application/json"
+          },
+          "415": {
+            "description": "The specified content type in the request is not supported\n",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/type_1"
+                }
+              }
+            },
+            "x-annotation-amf-mediaType": "application/json"
+          },
+          "500": {
+            "description": "Bad response from authorization server, or WSDL SOAP Fault error",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/type_1"
+                }
+              }
+            },
+            "x-annotation-amf-mediaType": "application/json"
+          }
+        },
+       
+                "schema": {
+                  "$ref": "#/components/schemas/type_1"
+                }
+              }
+            },
+            "x-annotation-amf-mediaType": "application/json"
+          },
+          "401": {
+            "description": "Unauthorized or invalid client application credentials"
+          },
+          "404": {
+            "description": "No resource exists for the requested URI.\n",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/type_1"
+                }
+              }
+            },
+            "x-annotation-amf-mediaType": "application/json"
+          },
+          "405": {
+            "description": "The specified method against the resource is invalid\n",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/type_1"
+                }
+              }
+            },
+            "x-annotation-amf-mediaType": "application/json"
+          },
+          "406": {
+            "description": "Not Acceptable\n",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/type_1"
+                }
+              }
+            },
+            "x-annotation-amf-mediaType": "application/json"
+          },
+          "415": {
+            "description": "The specified content type in the request is not supported\n",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/type_1"
+                }
+              }
+            },
+            "x-annotation-amf-mediaType": "application/json"
+          },
+          "500": {
+            "description": "Bad response from authorization server, or WSDL SOAP Fault error",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/type_1"
+                }
+              }
+            },
+            "x-annotation-amf-mediaType": "application/json"
+          }
+        },
+}

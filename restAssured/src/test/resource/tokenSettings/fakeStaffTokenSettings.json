@@ -1,0 +1,35 @@
+{
+ "cts": "OAUTH2_STATELESS_GRANT",
+ "auditTrackingId": "",
+ "subname": "salesforce",
+ "iss": "",
+ "tokenName": "access_token",
+ "token_type": "Bearer",
+ "aud": "salesforce",
+ "grant_type": "client_credentials",
+ "realm": "/system",
+ "jti": "",
+ "role": "",
+ "rqf": {
+  "sub": "",
+  "persona": {
+   "_id": "",
+   "type": "retail"
+  },
+  "ocvid":  ""
+ },
+ "acr": "IAL4.AAL2.FAL2",
+ "act": {
+  "sub": "salesforce"
+ },
+ "amr": [
+  "pwd"
+ ],
+ "anz_token_type": "staffRqfCustomer",
+ "scope": [
+  "au.anzx.crm",
+  "aegis-introspect",
+  "au.anzx.fraud"
+ ],
+ "expires_in": 31536000
+}

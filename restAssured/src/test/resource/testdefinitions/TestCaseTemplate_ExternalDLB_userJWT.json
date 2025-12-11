@@ -1,0 +1,56 @@
+[
+  {
+    "testName": "NG_Test_Endpoint_Response_200",
+    "enabled": true,
+    "baseUri": "/appointments/v1",
+    "path": "/locations",
+    "method": "GET",
+    "statusCode": "200",
+    "inputFormat": "application/json",
+    "queryParameters":
+    {
+      "include": "multiUseProducts",
+      "bb": "dd"
+    },
+    "pathParameters":
+    {
+
+    },
+    "bodyParameters":
+    {
+      "body1": "str1",
+      "body2": "str2"
+    },
+    "formParameters": {
+
+    },
+    "headerParameters":
+    {
+      "header1": "aa",
+      "header2": "bb"
+    },
+    "authParameters":
+    {
+      "type": "userJWT",
+      "ocvId": ""
+
+    },
+    "responseCheck":
+    {
+      "statusCode": "200",
+      "responseTime":"3000",
+      "body.dataType":"DetailsResult",
+      "body.dataCount": "1"
+    },
+    "schemaCheckEnabled": false,
+    "apiSchemaPath": "openAPI/api.yml"
+  }
+
+]
+
+
+
+
+
+
+

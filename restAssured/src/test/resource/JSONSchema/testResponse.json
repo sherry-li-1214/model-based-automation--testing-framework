@@ -1,0 +1,17 @@
+{
+  "count": "3",
+  "result": [
+    {
+      "addressId": "",
+      "encodedAddressId": "",
+      "address": "",
+      "score": "93"
+    },
+    {
+      "addressId": "",
+      "encodedAddressId": "",     
+        "address": "",
+      "score": "93"
+    }
+  ]
+}
