@@ -83,8 +83,8 @@ export let options = {
 The main function is what the virtual users will loop over during test execution.
 */
 export default function () {
-  let data = { relationshipType: 'SOLE', age: 24, customerSegment: "RETAIL", residencyStatus: "AU_CITIZEN" };
-var url = 'https://' + __ENV.host + '/product-catalog/v2/packages/search';
+  let data = { aa: 'SOLE', age: 24, bb: " ", cc: "AU_CITIZEN" };
+var url = 'https://' + __ENV.host + '/catalog/v2/packages/search';
 var params = {
     headers: {
       'client_id': __ENV.client_id, //environment variable
@@ -116,9 +116,4 @@ export function handleSummary(data) {
   };
 }
 
-// k6 run script-qa.js -e client_id=623073228170450a83367096df679fb0 -e client_secret=f9e241FF9A5142e3A0A70a00ee20e11d --iterations=1 -e host=qa.int.integration.(BBB)...com --http-debug=full --logformat=raw
-// k6 run script-qa.js -e client_id=623073228170450a83367096df679fb0 -e client_secret=f9e241FF9A5142e3A0A70a00ee20e11d -e host=qa.int.integration.(BBB)...com
-// k6 run script-qa.js -e client_id=623073228170450a83367096df679fb0 -e client_secret=f9e241FF9A5142e3A0A70a00ee20e11d --iterations=10 -e host=qa.int.integration.(BBB)...com
-//k6 run script-qa.js -e client_id=623073228170450a83367096df679fb0 -e client_secret=f9e241FF9A5142e3A0A70a00ee20e11d --iterations=20 -e host=qa.int.integration.(BBB)...com
-//k6 run script-qa.js -e client_id=623073228170450a83367096df679fb0 -e client_secret=f9e241FF9A5142e3A0A70a00ee20e11d --iterations=50 -e host=qa.int.integration.(BBB)...com
-// k6 run script-qa.js -e client_id=623073228170450a83367096df679fb0 -e client_secret=f9e241FF9A5142e3A0A70a00ee20e11d --iterations=100 -e host=qa.int.integration.(BBB)...com
+ 
