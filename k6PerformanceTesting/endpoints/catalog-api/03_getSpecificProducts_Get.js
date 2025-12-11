@@ -31,7 +31,7 @@ let getSpecificProducts=function () {
 		timeout: 180000, //Maximum time to wait for the request to complete. Default timeout is 60 seconds ("60s").
 	  };
 
-	   var url = 'https://' + configJson.url + '/product-catalog/v2/products/SAVING01?include=standardRates&include=ratePlans&effectiveDate=2024-05-20';
+	   var url = 'https://' + configJson.url + '/products/SAVING01?include=standardRates&include=ratePlans&effectiveDate=2024-05-20';
 		
 	  //let resp = http.get(url, params);
 	let res = http.get(url, params);
