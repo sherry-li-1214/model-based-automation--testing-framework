@@ -4,7 +4,7 @@
 
 This project is a proof of concept for K6, a load testing tool.
 
-# (AAA) Automation Testing Framework
+# K6 Performance Testing Framework
 
 
 <!-- TOC -->
@@ -69,12 +69,12 @@ use below command in the project folder to execute test cases.
 
 1)for one endpoint in one js file
 ```javascript
-ENV=sit_ch2.0 k6 run PT_One_Endpoint_test.js  
+ENV=sit k6 run PT_One_Endpoint_test.js  
 ```
 2) run multiple endpoints in one js file
    
 ```javascript
-ENV=sit_ch2.0 k6 run PT_catalog-api_v1.js  
+ENV=sit k6 run PT_catalog-api_v1.js  
 ```
 
 
