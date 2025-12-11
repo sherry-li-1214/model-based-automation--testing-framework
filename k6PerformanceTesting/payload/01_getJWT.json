@@ -1,0 +1,6 @@
+{
+  "audience": "sola",
+  "scopes": [
+  "AU.UNAUTHENTICATED"
+  ]
+}

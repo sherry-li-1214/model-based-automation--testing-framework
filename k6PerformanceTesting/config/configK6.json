@@ -1,0 +1,17 @@
+{
+  "thinkTime": 5,
+  "thinkTime1": 10,
+  "log": "true",
+  "SLA": {
+    "getJWT": 300,
+    "getProducts": 3000
+  },
+  "thresholds": {
+    "01_getJWT": [
+      "p(95)<3000"
+    ],
+    "02_getAllProducts": [
+      "p(95)<300"
+    ]
+  }
+}
