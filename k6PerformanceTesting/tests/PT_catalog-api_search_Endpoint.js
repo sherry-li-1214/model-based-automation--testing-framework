@@ -83,7 +83,3 @@ export function handleSummary(data) {
   };
 }
 
-// k6 run script-qa.js -e client_id=623073228170450a83367096df679fb0 -e client_secret=f9e241FF9A5142e3A0A70a00ee20e11d --iterations=1 -e host=qa.int.integration.(BBB)...com --http-debug=full --logformat=raw
-// k6 run script-qa.js -e client_id=623073228170450a83367096df679fb0 -e client_secret=f9e241FF9A5142e3A0A70a00ee20e11d -e host=qa.int.integration.(BBB)...com
-// k6 run script-qa.js -e client_id=623073228170450a83367096df679fb0 -e client_secret=f9e241FF9A5142e3A0A70a00ee20e11d --iterations=10 -e host=qa.int.integration.(BBB)...com
-//k6 run script-qa.js -e client_id=623073228170450a83367096df679fb0 -e client_secret=f9e241FF9A5142e3A0A70a00ee20e11d --iterations=20 -e host=qa.int.integration.(BBB)...com
