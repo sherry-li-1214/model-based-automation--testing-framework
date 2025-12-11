@@ -1,0 +1,9 @@
+FROM maven:3.3-jdk-8
+
+COPY src /apitesting/Restassured/src
+
+COPY pom.xml /apitesting/Restassured/pom.xml
+
+WORKDIR /apitesting/Restassured
+
+ENTRYPOINT /bin/bash
