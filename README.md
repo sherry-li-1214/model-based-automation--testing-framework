@@ -1,4 +1,4 @@
-# model-based   Automation Testing Framework
+# Model based  Automation Testing Framework
 
 - [AAA- Automation Testing Framework](#aaa--automation-testing-framework)
   - [What Can I do with aaa-RestAssured](#what-can-i-do-with-aaa-restassured)
@@ -115,12 +115,12 @@ Steps:
     {
       "statusCode": "200",
       "responseTime":3000,
-      "body.dataType":"anz.eventresults.GetAllProductDetailsResult",
+      "body.dataType":"aaa-.eventresults.GetAllProductDetailsResult",
       "body.dataCount": "1"
     },
     "schemaCheckEnabled": false,
 
-    "responseSchemaValidate": "openAPI/anz-cpb-product-catalog-api.yml",
+    "responseSchemaValidate": "openAPI/aaa--cpb-product-catalog-api.yml",
    },
   {
     "testName": "NG_Test_Get_All_Products_Endpoint_Response_200",
@@ -162,11 +162,11 @@ Steps:
     {
       "statusCode": "200",
       "responseTime":3000,
-      "body.dataType":"anz.eventresults.GetAllProductDetailsResult",
+      "body.dataType":"aaa-.eventresults.GetAllProductDetailsResult",
       "body.dataCount": 1
     },
     "schemaCheckEnabled": false,
-    "responseSchemaValidate": "openAPI/anz-cpb-product-catalog-api.yml",
+    "responseSchemaValidate": "openAPI/aaa--cpb-product-catalog-api.yml",
  
   }
 ]
@@ -219,7 +219,7 @@ Steps:
 
 #### Generating test cases
 
-  a) ~~[not needed anymore] create specific API Package folder  under src/test/java folder.  For example, if API_NAME is anz-cpb-cfaas-api, then the package name would be anz.cpb.cfaas.api~~
+  a) ~~[not needed anymore] create specific API Package folder  under src/test/java folder.  For example, if API_NAME is aaa--cpb-cfaas-api, then the package name would be aaa-.cpb.cfaas.api~~
 
   b) use below command in the project folder to create test cases.
 
@@ -228,7 +228,7 @@ java src/main/java/testgenerator/TestCaseGenerator.java <API_name> <test def fil
 
 Please note:  you should change above input args  bases on your API .
 
-    API_NAME                         --- your API name,for example anz-cpb-cfaas-api
+    API_NAME                         --- your API name,for example aaa--cpb-cfaas-api
     testdefinition file/folder path  --- your test case definition json file/folder path, you can use folder path to generate lots of test java files at the same time.
     outputClassName                  --- generated java test file name .This only valid when the    
                                           above path is file, not folders.  Otherwise, predefined test java file names will be created based on the input def file name.
@@ -236,7 +236,7 @@ Please note:  you should change above input args  bases on your API .
     isJWTNeeded                       ---true or false, default is false
 ```
 
-After command finishes,A new file src/test/java/anz/cpb/cfaas/api/{outputClassName}.java will be created.
+After command finishes,A new file src/test/java/aaa-/cpb/cfaas/api/{outputClassName}.java will be created.
 
 #### running test cases
 
@@ -248,13 +248,13 @@ use below command in the project folder to create test cases.
  mvn -Dtest="$PACKAGE_NAME.**" -Dtest.env=${TEST_ENVIRONMENT} test   -s settings.xml
 ```
 
-E.g.  mvn -Dtest="anz.cpb.product.catalog.api.**" -Dtest.env=dev test   -s settings.xml
+E.g.  mvn -Dtest="aaa-.cpb.product.catalog.api.**" -Dtest.env=dev test   -s settings.xml
 
 Please Note:
 
   1. $PACKAGE_NAME is your api package name based on java naming convention.
 
-     For example, if API_NAME is anz-cpb-cfaas-api, then the package name would be anz.cpb.cfaas.api
+     For example, if API_NAME is aaa--cpb-cfaas-api, then the package name would be aaa-.cpb.cfaas.api
 
   2. TEST_ENVIRONMENT(Default is Dev): 
       CH1.0 --sit or dev
@@ -264,16 +264,16 @@ Please Note:
 
 After running successfully in local env, please upload the cases into your <API> Repo.
 
-The paths should be here(examples for anz-cpb-cfaas-api):
+The paths should be here(examples for aaa--cpb-cfaas-api):
 
   ```java
-  <api repo>/tests/regression_test_java/src/test/java/anz/cpb/cfaas/api
+  <api repo>/tests/regression_test_java/src/test/java/aaa-/cpb/cfaas/api
   ```
 
 #### trigger  the test in  API Repo
 
 After get code promoted to API repo, below GHA will be automatically triggered and run all tests for your API.
-<https://github.com/anzx/anz-cpb-cfaas-api/actions/workflows/aaa--regression-testing-v2.yml>
+<https://github.com/aaa-x/aaa--cpb-cfaas-api/actions/workflows/aaa--regression-testing-v2.yml>
 
 ## Planned enhancement
 
@@ -289,6 +289,6 @@ enhance the frameworks via automatically generate test java package , folders an
 3. set response value output to global vaialbes. Thus the variables can be used in related requests.Eg. to set card status, need to get card numbers first.
 To fix the tests execution dependency issues,set execution order by the case order in test definition json files.
 4. automatically generate uuid/date variables for some scenarios, such as setting card status, set expire date....
-5. GHA has been updated to upload the test reports into honeyCombe for results analysis.https://ui.honeycomb.io/anzx/environments/non-production/board/pT2uGdjsdKA/***-testing
+5. GHA has been updated to upload the test reports into honeyCombe for results analysis.https://ui.honeycomb.io/aaa-x/environments/non-production/board/pT2uGdjsdKA/***-testing
 6. Can fetch client id and secret from GSM,rather than hard-coded them in configuration files.
 7. CH2.0 environment support
