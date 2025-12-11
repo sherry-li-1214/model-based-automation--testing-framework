@@ -25,10 +25,10 @@ echo "====================================================================="
 
 
 
-if [[ -f muleUploadResult.json ]]; then
+if [[ -f (AAA)UploadResult.json ]]; then
    echo "upload base 64 file existed ,and should be removed".
 
-   `rm muleUploadResult.json`
+   `rm (AAA)UploadResult.json`
 fi   
 
 if [ -d $TEST_RESULT_FOLDER ]; then
@@ -51,25 +51,25 @@ if [ -d $TEST_RESULT_FOLDER ]; then
   done
 
   prefix={'"'results'"':[
-  echo "$prefix" >> muleUploadResult.json
+  echo "$prefix" >> (AAA)UploadResult.json
   for value in "${arrVar[@]}"
   do
-     echo   "$value," | tee -a muleUploadResult.json   
+     echo   "$value," | tee -a (AAA)UploadResult.json   
     
   done
   #remove the last ","
-  if     [ -n "$(tail -c1 muleUploadResult.json)" ]    # if the file has not a trailing new line.
+  if     [ -n "$(tail -c1 (AAA)UploadResult.json)" ]    # if the file has not a trailing new line.
   then
-       truncate -s-1 muleUploadResult.json           # remove one char as the question request.
+       truncate -s-1 (AAA)UploadResult.json           # remove one char as the question request.
   else
-       truncate -s-2 muleUploadResult.json           # remove the last two characters
+       truncate -s-2 (AAA)UploadResult.json           # remove the last two characters
        echo "" >> file              # add the trailing new line back
   fi
  
-  echo "]}" >> muleUploadResult.json
+  echo "]}" >> (AAA)UploadResult.json
 
 
-  # cat muleUploadResult.json
+  # cat (AAA)UploadResult.json
 
 
  
@@ -95,7 +95,7 @@ if [ -d $TEST_RESULT_FOLDER ]; then
        --header 'Content-Type: application/json' \
        --header 'Accept: */*' \
        -k \
-       --data "$(cat muleUploadResult.json)"
+       --data "$(cat (AAA)UploadResult.json)"
   
   sleep 30
   
