@@ -32,7 +32,7 @@ let getSpecificProducts = function () {
 		timeout: 180000, //Maximum time to wait for the request to complete. Default timeout is 60 seconds ("60s").
 	  };
 
-	  let data = { relationshipType: 'SOLE', age: 24, customerSegment: "RETAIL", residencyStatus: "AU_CITIZEN" };
+	  let data = { aa: 'SOLE', bb: 24, cc: " ", dd: "AU_CITIZEN" };
 
 	 
 	  var url = 'https://' + __ENV.host + '/product-catalog/v2/products/search';
